@@ -1,4 +1,5 @@
-﻿using ProvaPub.Models;
+﻿using ProvaPub.Generic;
+using ProvaPub.Models;
 using ProvaPub.Repository;
 
 namespace ProvaPub.Services
@@ -12,10 +13,9 @@ namespace ProvaPub.Services
 			_ctx = ctx;
 		}
 
-		public ProductList  ListProducts(int page)
+		public PagedResult<Product>  GetList(int page)
 		{
-			return new ProductList() {  HasNext=false, TotalCount =10, Products = _ctx.Products.ToList() };
+			return _ctx.Products.GetPaged(page, Constants.MAX_PAGE_RESULT);
 		}
-
 	}
 }
