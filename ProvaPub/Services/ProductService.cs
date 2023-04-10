@@ -1,10 +1,12 @@
 ﻿using ProvaPub.Generic;
 using ProvaPub.Models;
 using ProvaPub.Repository;
+using ProvaPub.Extensions;
+using ProvaPub.Utilities;
 
 namespace ProvaPub.Services
 {
-	public class ProductService
+    public class ProductService
 	{
 		TestDbContext _ctx;
 

@@ -1,9 +1,9 @@
 ﻿
 using ProvaPub.Generic;
 
-namespace ProvaPub.Repository
+namespace ProvaPub.Extensions
 {
-	public static class TestDbContextExtensions
+	public static class QueryableExtensions
 	{
 		public static PagedResult<T> GetPaged<T>(this IQueryable<T> query, int page, int pageSize) where T : class
 		{
